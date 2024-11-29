@@ -1,0 +1,461 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    
+  }
+  h1, h2 {
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Navbar */
+  
+  /* Navbar Styling */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h3{color: #6A1B9A;}
+  p1 {color:#ddd}
+  h4{color: #333;}
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 10px 0;
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #FFD700;
+  }
+  .navbar ul {
+    list-style: none;
+    display: flex;
+  }
+  .navbar li {
+    margin-left: 20px;
+  }
+  .navbar a:hover {
+    color: #007BFF;
+  }
+  
+  /* Hero Section */
+  .hero {
+  height: 100vh;
+    background: url('images/hero-bg.jpg') no-repeat center center / cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .hero-content h2 span {
+    color: #007BFF;
+  }
+  /* For glowing effect of photo*/
+  
+  
+  @keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+  }
+  
+  
+  /* About Section */
+  .about {
+    padding: 50px 20px;
+    text-align: center;
+    background: #fff;
+  }
+  
+  /* Projects Section */
+  .projects {
+    padding: 50px 20px;
+    background: #f4f4f9;
+  }
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  .project {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+  }
+  .project img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  /* Contact Section */
+  .contact {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  .contact form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact input, .contact textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  .contact button {
+    padding: 10px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+  .contact button:hover {
+    background: #0056b3;
+  }
+  
+  /* Footer */
+  footer {
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+  }
+  /* Fade-In Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply the Animation */
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  /* Project Card Hover Effect */
+  .project {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Navbar Link Hover Effect */
+  .navbar a {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  .navbar a:hover {
+    color: #007BFF;
+  }
+  .navbar a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: #007BFF;
+    animation: underline 0.3s ease forwards;
+  }
+  
+  /* Underline Animation */
+  @keyframes underline {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  /* Gradient Animation */
+  .hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #007BFF, #6A1B9A);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+  }
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }/* Typing Animation */
+  .typing {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #333;
+    animation: typing 3s steps(20, end), blink 0.5s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+  
+  /* Project Grid and Images */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  .project {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .project img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  .project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  /* Project Images */
+  .project img {
+    width: 100%; /* Ensures the image spans the container width */
+    height: 200px; /* Set a consistent height for all images */
+    object-fit: cover; /* Ensures the image is cropped while maintaining aspect ratio */
+    border-radius: 5px; /* Optional: Adds rounded corners for a modern look */
+  }
+  /* Body background */
+  body {
+    background-image: url('https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920');
+    background-size: cover; /* Ensure the background covers the entire page */
+    background-position: center; /* Keep the background centered */
+    background-attachment: fixed; /* Makes the background stay fixed while scrolling */
+    font-family: 'Arial', sans-serif; /* Modern font */
+    color: #fff; /* Light color text for contrast */
+  }
+  
+  /* Add some padding and space around the sections */
+  section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+  /* Navbar styling */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 1000; /* Ensure the navbar stays on top */
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 10px 0;
+    display: inline-block;
+    transition: color 0.3s ease; /* Smooth color change */
+  }
+  
+  nav a:hover {
+    color: #FFD700; /* Gold color on hover */
+  }
+  /* Navbar Styling */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 1000; /* Ensure the navbar stays on top */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Navbar Links */
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 10px 0;
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s ease; /* Smooth color change */
+  }
+  
+  /* Navbar Links Hover Effects */
+  nav a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FFD700; /* Gold underline color */
+    transition: width 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #FFD700; /* Gold color on hover */
+  }
+  
+  nav a:hover::before {
+    width: 100%; /* Underline expands when hovered */
+  }
+  
+  nav a:focus {
+    outline: none; /* Remove the default outline when focused */
+  }
+  
+  #about img {
+    border-radius: 50%; /* Make the image round */
+    width: 150px;  /* Set the image width */
+    height: 150px; /* Set the image height */
+    object-fit: cover; /* Ensure the image maintains aspect ratio */
+    margin-bottom: 20px; /* Add some space below the image */
+  }
+  
+/* General Slider Styles */
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+}
+
+/* Slider (track) */
+.slider {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+/* Slider Images */
+.slider-image {
+  width: 100vw;
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  transition: transform 0.5s ease-in-out, filter 0.5s ease;
+}
+/* Hover effect - slight zoom and brightness change */
+.slider-image:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Overlay Text */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Show overlay text on hover */
+.slider-image:hover .overlay {
+  opacity: 1;
+}
+
+/* Parallax Effect for both sliders */
+#slider1 .slider-image:nth-child(even), #slider2 .slider-image:nth-child(even) {
+  animation: parallax 10s infinite linear;
+}
+
+#slider1 .slider-image:nth-child(odd), #slider2 .slider-image:nth-child(odd) {
+  animation: parallax-reverse 10s infinite linear;
+}
+
+@keyframes parallax {
+  0% { transform: translateX(0) scale(1.1); }
+  50% { transform: translateX(-10%) scale(1.05); }
+  100% { transform: translateX(0) scale(1.1); }
+}
+
+@keyframes parallax-reverse {
+  0% { transform: translateX(0) scale(1.1); }
+  50% { transform: translateX(10%) scale(1.05); }
+  100% { transform: translateX(0) scale(1.1); }
+}
+
+@media (max-width: 480px) {
+  .overlay h2 {
+    font-size: 1px; /* Further reduce font size for mobile devices */
+  }
+}
